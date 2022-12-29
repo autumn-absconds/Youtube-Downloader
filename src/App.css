@@ -1,0 +1,21 @@
+.header {
+  text-align: center;
+  margin: auto;
+}
+
+.navLlink {
+  text-decoration: none;
+  color: #08090c;
+  font-size:18px;
+  font-weight:bold;
+ 
+  box-shadow:0 4px 8px 0 #474747;
+  padding:5px;
+  margin:7px;
+  
+}
+.navLlink:hover{
+  color :#ff002b;
+  font-size:19px;
+  box-shadow:0 4px 8px 0 #ff002b;
+}
