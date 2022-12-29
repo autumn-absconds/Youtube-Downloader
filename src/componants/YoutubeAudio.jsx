@@ -1,8 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 // import axios from "axios";
 import img from "./music.jpg";
 
 const YoutubeAudio = (props) => {
+  const [errorText, setErrorText] = useState(" ");
+
   props.setHeading("Youtube Video to MP3");
 
   const createLink = () => { };
@@ -26,11 +28,20 @@ const YoutubeAudio = (props) => {
       .then((response) => response.json())
       .then((response) => {
         const data = response.link;
+        const msg = response.msg;
         console.log(response);
-
+        console.log(msg);
         props.setDownloadLink(data);
+
+        setErrorText(msg);
+
+
+
       })
-      .catch((err) => console.error(err));
+      .catch((err) => {
+        console.error(err)
+        setErrorText(err);
+      });
   };
 
   return (
@@ -55,6 +66,9 @@ const YoutubeAudio = (props) => {
       >
         Convert
       </button>
+
+      <p className="card-text text-danger pt-3">Result</p>
+      <p className="card-text text-success">{errorText}</p>
     </>
   );
 };

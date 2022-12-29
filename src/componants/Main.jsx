@@ -18,7 +18,7 @@ const Main = () => {
 
   return (
     <>
-      <div style={{ width: "75%" }} className="card my-5 header text-center">
+      <div style={{ width: "75%" }} className="card my-5 header shadow p-3 mb-5 bg-body-tertiary rounded text-center">
         <div className="card-header text-light bg-danger bg-gradient bg-opacity-100 py-3">
           <h2>{heading}</h2>
         </div>
@@ -31,6 +31,7 @@ const Main = () => {
                 <YoutubeVideo
                   setHeading={setHeading}
                   setDownloadLink={setDownloadLink}
+
                 />
               }
             ></Route>
@@ -41,15 +42,17 @@ const Main = () => {
                 <YoutubeAudio
                   setHeading={setHeading}
                   setDownloadLink={setDownloadLink}
+
                 />
               }
             ></Route>
           </Routes>
-          <p className="card-text">Result</p>
+
           <a
+            disabled
             href={downloadLink}
             target="_blank"
-            className="btn btn-outline-success w-10  shadow mb-4  bg-body-success rounded"
+            className={`btn btn-outline-success w-10  shadow mb-4  bg-body-success rounded ${downloadLink === " " ? "disabled" : " "}`}
             style={{ margin: "auto" }}
             // onClick={() => {
             //   console.log(downloadLink);
@@ -65,8 +68,8 @@ const Main = () => {
             Download
           </a>
         </div>
-        <div className="card-footer  text-light bg-danger bg-gradient">
-          {downloadLink !== " " ? "Success" : "Welcome"}
+        <div className="card-footer fw-bold text-light bg-danger bg-gradient">
+          Welcome
         </div>
       </div>
     </>

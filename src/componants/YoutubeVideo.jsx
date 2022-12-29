@@ -1,11 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 // import axios from "axios";
 import img from "./img.jpg";
 
 const YoutubeVideo = (props) => {
+  const [errorText, setErrorText] = useState(" ");
   props.setHeading("Youtube Video downloader");
 
-  const createLink = () => {};
+  const createLink = () => { };
 
   const convertVideo = () => {
     const link = document.getElementById("link").value;
@@ -53,12 +54,15 @@ const YoutubeVideo = (props) => {
 
         props.setDownloadLink(data);
       })
-      .catch((err) => console.error(err));
+      .catch((err) => {
+        console.error(err)
+        setErrorText(err);
+      });
   };
 
   return (
     <>
-       <img src={img} class="card-img-top" alt="hi" />
+      <img src={img} class="card-img-top" alt="hi" />
       <h5 className="card-title">
         {" "}
         You can download videos from youtube in 1080px
@@ -76,8 +80,11 @@ const YoutubeVideo = (props) => {
         onClick={convertVideo}
         className="shadow my-2   bg-body-primary rounded btn btn-outline-danger"
       >
-       Convert
+        Convert
       </button>
+
+      <p className="card-text text-danger pt-3">Result</p>
+      <p className="card-text text-success">{errorText}</p>
     </>
   );
 };
