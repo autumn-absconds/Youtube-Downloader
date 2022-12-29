@@ -1,6 +1,6 @@
 import React from "react";
 // import axios from "axios";
-
+import img from "./img.jpg";
 
 const YoutubeVideo = (props) => {
   props.setHeading("Youtube Video downloader");
@@ -58,6 +58,7 @@ const YoutubeVideo = (props) => {
 
   return (
     <>
+       <img src={img} class="card-img-top" alt="hi" />
       <h5 className="card-title">
         {" "}
         You can download videos from youtube in 1080px

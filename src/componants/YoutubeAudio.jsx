@@ -1,6 +1,6 @@
 import React from "react";
 // import axios from "axios";
-
+import img from "./music.jpg";
 
 const YoutubeAudio = (props) => {
   props.setHeading("Youtube Video to MP3");
@@ -35,7 +35,7 @@ const YoutubeAudio = (props) => {
 
   return (
     <>
-      <img src="https://th.bing.com/th/id/R.3d88a927f8529dcba03364b09d98adbe?rik=JYmQaMVSULpYQg&riu=http%3a%2f%2fthewowstyle.com%2fwp-content%2fuploads%2f2015%2f01%2fnature-images.jpg&ehk=BNPsuSOUR7ATZ3EpRwxx1xFl7LUbO3tYlu1wFLCBrCE%3d&risl=&pid=ImgRaw&r=0" class="card-img-top" alt="hi" />
+      <img src={img} class="card-img-top" alt="hi" />
       <h5 className="card-title mt-4">
         {" "}
         You can convert youtube video to mp3
