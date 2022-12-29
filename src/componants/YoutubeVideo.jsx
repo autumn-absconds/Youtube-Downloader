@@ -11,30 +11,7 @@ const YoutubeVideo = (props) => {
   const convertVideo = () => {
     const link = document.getElementById("link").value;
     console.log(link);
-    // const options = {
-    //   method: "GET",
-    //   url:
-    //     "https://youtube-video-full-hd-1080p.p.rapidapi.com/GetVideoHDDetails",
-    //   params: { URL: "https://www.youtube.com/watch?v=oskpFeW3TYE" },
-    //   // params: { URL: `${link}` },
-    //   headers: {
-    //     "X-RapidAPI-Key": "6a9a50d7afmsh4dd6f42d1fed78cp184326jsn64d0ef714c15",
-    //     "X-RapidAPI-Host": "youtube-video-full-hd-1080p.p.rapidapi.com"
-    //   }
-    // };
-
-    // const apiCall = () => {
-    // axios
-    //   .request(options)
-    //   .then(function (response) {
-    //     console.log(response.data);
-    //   })
-    //   .catch(function (error) {
-    //     console.error(error);
-    //   });
-    // };
-
-    // apiCall();
+    
     const options = {
       method: "GET",
       headers: {
@@ -49,9 +26,9 @@ const YoutubeVideo = (props) => {
     )
       .then((response) => response.json())
       .then((response) => {
-        const data = response;
+        const data = response[0].DownloadURL;
         console.log(response);
-
+setErrorText(data)
         props.setDownloadLink(data);
       })
       .catch((err) => {
@@ -62,7 +39,7 @@ const YoutubeVideo = (props) => {
 
   return (
     <>
-      <img src={img} class="card-img-top" alt="hi" />
+      <img src={img} className="card-img-top object-fit-md-contain border rounded" alt="hi" height={400}  />
       <h5 className="card-title">
         {" "}
         You can download videos from youtube in 1080px

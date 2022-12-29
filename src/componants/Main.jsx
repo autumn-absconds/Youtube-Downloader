@@ -10,11 +10,7 @@ const Main = () => {
   const [heading, setHeading] = useState("hi");
 
   const [downloadLink, setDownloadLink] = useState(" ");
-  // if (downloadLink === " ") {
-  //   document.getElementById("Button").disabled = true;
-  // } else {
-  //   document.getElementById("Button").disabled = false;
-  // }
+
 
   return (
     <>
@@ -54,15 +50,7 @@ const Main = () => {
             target="_blank"
             className={`btn btn-outline-success w-10  shadow mb-4  bg-body-success rounded ${downloadLink === " " ? "disabled" : " "}`}
             style={{ margin: "auto" }}
-            // onClick={() => {
-            //   console.log(downloadLink);
-
-            //   window.open(
-            //     { downloadLink },
-            //     "_blank",
-            //     "toolbar=yes,top=500,left=500,width=400,height=400"
-            //   );
-            // }}
+           
             id="Button"
           >
             Download

@@ -46,7 +46,7 @@ const YoutubeAudio = (props) => {
 
   return (
     <>
-      <img src={img} class="card-img-top" alt="hi" />
+      <img src={img} className="card-img-top object-fit-md-contain border rounded" alt="hi" height={400} />
       <h5 className="card-title mt-4">
         {" "}
         You can convert youtube video to mp3

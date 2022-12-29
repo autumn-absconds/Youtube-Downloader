@@ -23,12 +23,12 @@ function Navv() {
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav me-auto mb-2 mb-lg-0">
             <li className="nav-item">
-              <Link className="navLlink" to="/">
+              <Link className="navLlink mx-3 my-3" to="/">
                 Video Downloader
               </Link>
             </li>
             <li className="nav-item">
-              <Link className="navLlink" to="audio">
+              <Link className="navLlink mx-3 my-3" to="audio">
                 Convert to mp3
               </Link>
             </li>
