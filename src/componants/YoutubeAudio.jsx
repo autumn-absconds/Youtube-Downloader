@@ -58,6 +58,7 @@ const YoutubeAudio = (props) => {
           onInput={createLink}
           id="link"
           type="url"
+          placeholder="video id"
         />
       </div>
       <button

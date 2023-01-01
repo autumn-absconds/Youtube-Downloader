@@ -1,6 +1,7 @@
 .header {
   text-align: center;
   margin: auto;
+  overflow:hidden;
 }
 
 .navLlink {

@@ -51,6 +51,7 @@ setErrorText(data)
           onInput={createLink}
           id="link"
           type="url"
+          placeholder="video link"
         />
       </div>
       <button
