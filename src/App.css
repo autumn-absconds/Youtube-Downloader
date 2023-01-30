@@ -1,7 +1,6 @@
 .header {
   text-align: center;
   margin: auto;
-  overflow:hidden;
 }
 
 .navLlink {
@@ -19,4 +18,17 @@
   color :#ff002b;
   font-size:19px;
 
+}
+
+.rect{
+ box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 15px 0 rgba(255, 0, 35, 0.8);
+}
+.download{
+ box-shadow:  0 8px 10px 0 rgba(84, 255, 110, 0.7);
+}
+.audio{
+ box-shadow:  3px 5px 10px 0 rgba(232, 179, 29, 0.5);
+}
+.video{
+ box-shadow:  0 8px 10px 0 rgba(255, 0, 35, 0.5);
 }

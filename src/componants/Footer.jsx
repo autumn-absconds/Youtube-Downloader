@@ -10,8 +10,8 @@ const Footer = () => {
 
   return (
     <div className="border-top">
-      <footer className="mx-1 my-0 d-flex flex-wrap justify-content-between align-items-center py-1  ">
-        <strong className="col-md-4 mb-0 " style={myStyle}>Shubham Yadav</strong>
+      <footer className=" my-0 d-flex flex-wrap justify-content-evenly align-items-center pt-1  ">
+        <strong style={myStyle}>Shubham Yadav</strong>
 
 
 

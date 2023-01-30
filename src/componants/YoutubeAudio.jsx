@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 // import axios from "axios";
-import img from "./music.jpg";
+// import img from "./music.jpg";
 
 const YoutubeAudio = (props) => {
   const [errorText, setErrorText] = useState(" ");
@@ -46,15 +46,15 @@ const YoutubeAudio = (props) => {
 
   return (
     <>
-      <img src={img} className="card-img-top object-fit-md-contain border rounded" alt="hi" height={400} />
-      <h5 className="card-title mt-4">
+      {/*  <img src={img} className="card-img-top object-fit-md-contain border rounded" alt="hi" height={400} /> */}
+      <h5 className="card-title mt-2">
         {" "}
         You can convert youtube video to mp3
       </h5>
       <p className="card-text">Paste the id from youtube here</p>
       <div className="header">
         <input
-          className="border border-warning shadow p-2 mb-3 bg-body-warning rounded"
+          className="border border-warning p-2 mb-3 audio"
           onInput={createLink}
           id="link"
           type="url"
@@ -63,12 +63,12 @@ const YoutubeAudio = (props) => {
       </div>
       <button
         onClick={convertVideo}
-        className="btn-outline-warning shadow my-2   bg-body-warning rounded btn "
+        className="btn-outline-warning audio my-3   bg-body-warning rounded btn "
       >
         Convert
       </button>
 
-      <p className="card-text text-danger pt-3">Result</p>
+      <p className="card-text text-danger pt-3">Result  (if result shows in progress then click on convert on more time )</p>
       <p className="card-text text-success">{errorText}</p>
     </>
   );

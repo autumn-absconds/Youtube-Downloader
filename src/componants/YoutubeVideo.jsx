@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 // import axios from "axios";
-import img from "./img.jpg";
+// import img from "./img.jpg";
 
 const YoutubeVideo = (props) => {
   const [errorText, setErrorText] = useState(" ");
@@ -11,7 +11,7 @@ const YoutubeVideo = (props) => {
   const convertVideo = () => {
     const link = document.getElementById("link").value;
     console.log(link);
-    
+
     const options = {
       method: "GET",
       headers: {
@@ -28,7 +28,7 @@ const YoutubeVideo = (props) => {
       .then((response) => {
         const data = response[0].DownloadURL;
         console.log(response);
-setErrorText(data)
+        setErrorText(data)
         props.setDownloadLink(data);
       })
       .catch((err) => {
@@ -39,15 +39,15 @@ setErrorText(data)
 
   return (
     <>
-      <img src={img} className="card-img-top object-fit-md-contain border rounded" alt="hi" height={400}  />
-      <h5 className="card-title">
+      {/*<img src={img} className="card-img-top object-fit-md-contain border rounded-0" alt="hi" height={400} /> */}
+      <h5 className="card-title mt-2 rounded">
         {" "}
         You can download videos from youtube in 1080px
       </h5>
       <p className="card-text">Paste the url from youtube here</p>
       <div className="header">
         <input
-          className="border border-danger shadow p-2 mb-3 bg-body-danger rounded"
+          className="border border-danger p-2 mb-3 video"
           onInput={createLink}
           id="link"
           type="url"
@@ -56,7 +56,7 @@ setErrorText(data)
       </div>
       <button
         onClick={convertVideo}
-        className="shadow my-2   bg-body-primary rounded btn btn-outline-danger"
+        className="my-3 video rounded btn btn-outline-danger"
       >
         Convert
       </button>
